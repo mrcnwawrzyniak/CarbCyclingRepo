@@ -7,10 +7,11 @@ public class UserDataWindow extends JFrame
 {
 	private JPanel rootPaneUserDataInfo;
 	private JTextArea textArea1;
-	private JTextArea textArea2;
 	private JTextArea textArea3;
 	private JTextArea textArea4;
 	private JTextArea textArea5;
+	private JTextArea textArea2;
+	private JButton applyButton;
 
 	public UserDataWindow()
 	{
@@ -22,9 +23,9 @@ public class UserDataWindow extends JFrame
 		setContentPane(rootPaneUserDataInfo);
 
 		this.setTitle("User Data Info");
-		this.setBounds(400, 100, 400, 300);
+		this.setBounds(900, 100, 320, 230);
 		this.setVisible(true);
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
 	}
 
