@@ -9,7 +9,7 @@ public class Window extends JFrame
 	private JPanel rootPane;
 	private JMenuBar mainMenuBar;
 	private JMenu mainMenu;
-	private JMenuItem menuItemPersonalInfo, menuItemLookAndFeel;
+	private JMenuItem menuItemPersonalInfo, menuItemLookAndFeel, menuHelp, menuSave, menuExit;
 	private UserDataWindow userDataWindow;
 
 	public Window()
@@ -52,13 +52,9 @@ public class Window extends JFrame
 
 		menuItemLookAndFeel = new JMenuItem();
 		menuItemLookAndFeel.setText("Theme");
-		menuItemLookAndFeel.addActionListener(new ActionListener()
+		menuItemLookAndFeel.addActionListener(e ->
 		{
-			@Override
-			public void actionPerformed(ActionEvent e)
-			{
 
-			}
 		});
 
 		mainMenu.add(menuItemPersonalInfo);
@@ -71,6 +67,22 @@ public class Window extends JFrame
 			{
 				userDataWindow = new UserDataWindow();
 			}
+		});
+
+		menuHelp = new JMenuItem();
+		menuExit = new JMenuItem();
+		menuSave = new JMenuItem();
+
+		mainMenu.add(menuHelp);
+		menuHelp.setText("Help");
+
+		mainMenu.add(menuSave);
+		menuSave.setText("Save");
+
+		mainMenu.add(menuExit);
+		menuExit.setText("Exit");
+		menuExit.addActionListener(e -> {
+			this.dispose();
 		});
 	}
 }

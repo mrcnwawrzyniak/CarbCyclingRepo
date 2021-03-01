@@ -15,60 +15,26 @@ public class UserDataWindow extends JFrame
 	private String name;
 	private int age, heigth, weigth, dietPeriod;
 
+	KeyAdapter keyAdapter = new KeyAdapter()
+	{
+		@Override
+		public void keyTyped(KeyEvent e)
+		{
+			char character = e.getKeyChar();
+			if ((character < '0' || character > '9') && character != '\b')
+			{
+				e.consume();
+			}
+		}
+	};
+
 	public UserDataWindow()
 	{
 		initWindow();
-		textFieldAge.addKeyListener(new KeyAdapter()
-		{
-			@Override
-			public void keyTyped(KeyEvent e)
-			{
-				char character = e.getKeyChar();
-				if ((character < '0' || character > '9') && character != '\b')
-				{
-					e.consume();
-				}
-			}
-		});
-
-		textFieldheigth.addKeyListener(new KeyAdapter()
-		{
-			@Override
-			public void keyTyped(KeyEvent e)
-			{
-				char character = e.getKeyChar();
-				if ((character < '0' || character > '9') && character != '\b')
-				{
-					e.consume();
-				}
-			}
-		});
-
-		textFieldWeigth.addKeyListener(new KeyAdapter()
-		{
-			@Override
-			public void keyTyped(KeyEvent e)
-			{
-				char character = e.getKeyChar();
-				if ((character < '0' || character > '9') && character != '\b')
-				{
-					e.consume();
-				}
-			}
-		});
-
-		textFieldPeriod.addKeyListener(new KeyAdapter()
-		{
-			@Override
-			public void keyTyped(KeyEvent e)
-			{
-				char character = e.getKeyChar();
-				if ((character < '0' || character > '9') && character != '\b')
-				{
-					e.consume();
-				}
-			}
-		});
+		textFieldAge.addKeyListener(keyAdapter);
+		textFieldheigth.addKeyListener(keyAdapter);
+		textFieldWeigth.addKeyListener(keyAdapter);
+		textFieldPeriod.addKeyListener(keyAdapter);
 
 		applyButton.addActionListener(e ->
 		{
@@ -80,6 +46,7 @@ public class UserDataWindow extends JFrame
 			createNewUser();
 		});
 	}
+
 
 	private void initWindow()
 	{
