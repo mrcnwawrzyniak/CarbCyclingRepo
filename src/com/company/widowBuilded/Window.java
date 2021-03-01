@@ -25,8 +25,19 @@ public class Window extends JFrame
 		this.setBounds(300, 100, 600, 400);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setFeel();
 	}
-
+	private void setFeel()
+	{
+		try
+		{
+			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+		}
+		catch(Exception ex)
+		{
+			JOptionPane.showMessageDialog(null, ex.getMessage());
+		}
+	}
 	private void initMenuBar()
 	{
 		mainMenuBar = new JMenuBar();
@@ -41,6 +52,14 @@ public class Window extends JFrame
 
 		menuItemLookAndFeel = new JMenuItem();
 		menuItemLookAndFeel.setText("Theme");
+		menuItemLookAndFeel.addActionListener(new ActionListener()
+		{
+			@Override
+			public void actionPerformed(ActionEvent e)
+			{
+
+			}
+		});
 
 		mainMenu.add(menuItemPersonalInfo);
 		mainMenu.add(menuItemLookAndFeel);

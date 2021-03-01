@@ -48,7 +48,7 @@
           <text value="   Period (months)"/>
         </properties>
       </component>
-      <component id="f39c" class="javax.swing.JTextArea" binding="textArea3" default-binding="true">
+      <component id="f39c" class="javax.swing.JTextArea" binding="textAreaHeigth">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="180" height="20"/>
@@ -56,7 +56,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="48d02" class="javax.swing.JTextArea" binding="textArea4" default-binding="true">
+      <component id="48d02" class="javax.swing.JTextArea" binding="textAreaWeigth">
         <constraints>
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="180" height="20"/>
@@ -64,7 +64,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="6eaa" class="javax.swing.JTextArea" binding="textArea5" default-binding="true">
+      <component id="6eaa" class="javax.swing.JTextArea" binding="textAreaPeriod">
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="180" height="20"/>
@@ -72,7 +72,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="6a376" class="javax.swing.JTextArea" binding="textArea1">
+      <component id="6a376" class="javax.swing.JTextArea" binding="textAreaName">
         <constraints>
           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="180" height="20"/>
@@ -80,7 +80,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="2d0d3" class="javax.swing.JTextArea" binding="textArea2">
+      <component id="2d0d3" class="javax.swing.JTextArea" binding="textAreaAge">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="180" height="20"/>

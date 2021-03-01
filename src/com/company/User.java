@@ -5,7 +5,7 @@ import javax.swing.*;
 public class User
 {
 	private String name;
-	private int age, weigth, heigth, dietPeriodInmonths;
+	private int age, weigth, heigth, dietPeriodInMonths;
 
 	public String getName()
 	{
@@ -30,7 +30,7 @@ public class User
 		if (age <= 0)
 			JOptionPane.showMessageDialog(null, "Invalid age");
 		else
-			this.weigth = age;
+			this.age = age;
 	}
 
 	public int getWeigth()
@@ -40,7 +40,7 @@ public class User
 
 	public void setWeigth(int weigth)
 	{
-		if (age <= 0)
+		if (weigth <= 0)
 			JOptionPane.showMessageDialog(null, "Invalid weigth");
 		else
 			this.weigth = weigth;
@@ -59,17 +59,31 @@ public class User
 			this.heigth = heigth;
 	}
 
-	public int getDietPeriodInmonths()
+	public int dietPeriodInMonths()
 	{
-		return dietPeriodInmonths;
+		return dietPeriodInMonths;
 	}
 
-	public void setDietPeriodInmonths(int dietPeriodInmonths)
+	public void setDietPeriodInmonths(int dietPeriodInMonths)
 	{
-		if (dietPeriodInmonths <= 0 && dietPeriodInmonths >= 5)
+		if (dietPeriodInMonths <= 0 && dietPeriodInMonths >= 5)
 			JOptionPane.showMessageDialog(null, "Minimum died period: 1, Maximum diet period: 5");
 		else
-			this.dietPeriodInmonths =dietPeriodInmonths;
+			this.dietPeriodInMonths =dietPeriodInMonths;
 	}
 
+	public User(String name, int age, int heigth, int weigth, int dietPeriodInMonths)
+	{
+		setName(name);
+		setAge(age);
+		setHeigth(heigth);
+		setWeigth(weigth);
+		setDietPeriodInmonths(dietPeriodInMonths);
+	}
+
+	@Override
+	public String toString()
+	{
+		return "User " + name + ", age: " + age + ", weigth: " + weigth + ", heigth: " + heigth + ", dietPeriodInMonths: " + dietPeriodInMonths + '}';
+	}
 }
