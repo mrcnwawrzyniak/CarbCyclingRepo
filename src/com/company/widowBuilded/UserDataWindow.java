@@ -1,6 +1,7 @@
 package com.company.widowBuilded;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class UserDataWindow extends JFrame
 {
@@ -18,7 +19,9 @@ public class UserDataWindow extends JFrame
 		this.setBounds(400, 100, 300, 200);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+
 	}
+
 
 
 }
