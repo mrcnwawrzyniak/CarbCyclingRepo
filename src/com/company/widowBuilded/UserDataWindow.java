@@ -11,6 +11,7 @@ public class UserDataWindow extends JFrame
 	private JPanel rootPaneUserDataInfo;
 	private JButton applyButton;
 	private JTextField textFieldName, textFieldAge, textFieldheigth, textFieldWeigth, textFieldPeriod;
+	User user;
 
 	private String name;
 	private int age, heigth, weigth, dietPeriod;
@@ -47,7 +48,6 @@ public class UserDataWindow extends JFrame
 		});
 	}
 
-
 	private void initWindow()
 	{
 		setContentPane(rootPaneUserDataInfo);
@@ -59,7 +59,9 @@ public class UserDataWindow extends JFrame
 
 	private void createNewUser()
 	{
-		User user = new User(name, age, heigth, weigth, dietPeriod);
-		System.out.println(user.toString());
+		Window window = new Window();
+		user = new User(name, age, heigth, weigth, dietPeriod);
+		window.setLabelsWithUserData(user);
 	}
+
 }

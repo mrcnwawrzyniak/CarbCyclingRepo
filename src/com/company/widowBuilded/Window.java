@@ -1,5 +1,7 @@
 package com.company.widowBuilded;
 
+import com.company.User;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,6 +9,8 @@ import java.awt.event.ActionListener;
 public class Window extends JFrame
 {
 	private JPanel rootPane;
+	private JLabel lName, lAge, lHeigth, lWeigth, lPeriod;
+	private JLabel lNameData, lAgeData, lHeightData, lWeightData, lPeriodData;
 	private JMenuBar mainMenuBar;
 	private JMenu mainMenu;
 	private JMenuItem menuItemPersonalInfo, menuItemLookAndFeel, menuHelp, menuSave, menuExit;
@@ -88,5 +92,20 @@ public class Window extends JFrame
 		menuExit.addActionListener(e -> {
 			this.dispose();
 		});
+	}
+
+	void setLabelsWithUserData(User user)
+	{
+		lNameData = new JLabel();
+		lAgeData = new JLabel();
+		lHeightData = new JLabel();
+		lWeightData = new JLabel();
+		lPeriodData = new JLabel();
+
+		lNameData.setText(user.getName());
+		lAgeData.setText(Integer.toString(user.getAge()));
+		lHeightData.setText(Integer.toString(user.getHeigth()));
+		lWeightData.setText(Integer.toString(user.getWeigth()));
+		lPeriodData.setText(Integer.toString(user.dietPeriodInMonths()));
 	}
 }

@@ -69,7 +69,7 @@ public class User
 		if (dietPeriodInMonths <= 0 && dietPeriodInMonths >= 5)
 			JOptionPane.showMessageDialog(null, "Minimum died period: 1, Maximum diet period: 5");
 		else
-			this.dietPeriodInMonths =dietPeriodInMonths;
+			this.dietPeriodInMonths = dietPeriodInMonths;
 	}
 
 	public User(String name, int age, int heigth, int weigth, int dietPeriodInMonths)
