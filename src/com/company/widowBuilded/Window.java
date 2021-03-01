@@ -1,14 +1,17 @@
-package com.company;
+package com.company.widowBuilded;
 
 import javax.swing.*;
-import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Window extends JFrame
 {
 	private JPanel rootPane;
 	private JMenuBar mainMenuBar;
 	private JMenu mainMenu;
-	private JMenuItem menuItemPersonalSettings, menuItemLookAndFeel;
+	private JMenuItem menuItemPersonalInfo, menuItemLookAndFeel;
+	private UserDataWindow userDataWindow;
+
 	public Window()
 	{
 		initWindow();
@@ -17,7 +20,6 @@ public class Window extends JFrame
 	}
 	private void initWindow()
 	{
-
 		setContentPane(rootPane);
 		this.setTitle("CarbCycling");
 		this.setBounds(300, 100, 600, 400);
@@ -34,13 +36,22 @@ public class Window extends JFrame
 		mainMenuBar.add(mainMenu);
 		mainMenu.setText("Settings");
 
-		menuItemPersonalSettings = new JMenuItem();
-		menuItemPersonalSettings.setText("User");
+		menuItemPersonalInfo = new JMenuItem();
+		menuItemPersonalInfo.setText("User");
 
 		menuItemLookAndFeel = new JMenuItem();
 		menuItemLookAndFeel.setText("Theme");
 
-		mainMenu.add(menuItemPersonalSettings);
+		mainMenu.add(menuItemPersonalInfo);
 		mainMenu.add(menuItemLookAndFeel);
+
+		menuItemPersonalInfo.addActionListener(new ActionListener()
+		{
+			@Override
+			public void actionPerformed(ActionEvent e)
+			{
+				userDataWindow = new UserDataWindow();
+			}
+		});
 	}
 }
