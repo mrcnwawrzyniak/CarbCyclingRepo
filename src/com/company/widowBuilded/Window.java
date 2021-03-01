@@ -11,6 +11,7 @@ public class Window extends JFrame
 	private JMenu mainMenu;
 	private JMenuItem menuItemPersonalInfo, menuItemLookAndFeel, menuHelp, menuSave, menuExit;
 	private UserDataWindow userDataWindow;
+	private HelpWindow helpWindow;
 
 	public Window()
 	{
@@ -75,6 +76,9 @@ public class Window extends JFrame
 
 		mainMenu.add(menuHelp);
 		menuHelp.setText("Help");
+		menuHelp.addActionListener(e -> {
+			helpWindow = new HelpWindow();
+		});
 
 		mainMenu.add(menuSave);
 		menuSave.setText("Save");
