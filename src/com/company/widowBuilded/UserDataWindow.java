@@ -3,9 +3,6 @@ package com.company.widowBuilded;
 import com.company.User;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
@@ -20,6 +17,7 @@ public class UserDataWindow extends JFrame
 
 	public UserDataWindow()
 	{
+		initWindow();
 		textFieldAge.addKeyListener(new KeyAdapter()
 		{
 			@Override
@@ -72,11 +70,14 @@ public class UserDataWindow extends JFrame
 			}
 		});
 
-
-		initWindow();
 		applyButton.addActionListener(e ->
 		{
-
+			name = textFieldName.getText();
+			age = Integer.parseInt(textFieldAge.getText());
+			heigth = Integer.parseInt(textFieldheigth.getText());
+			weigth = Integer.parseInt(textFieldWeigth.getText());
+			dietPeriod = Integer.parseInt(textFieldPeriod.getText());
+			createNewUser();
 		});
 	}
 
@@ -92,5 +93,6 @@ public class UserDataWindow extends JFrame
 	private void createNewUser()
 	{
 		User user = new User(name, age, heigth, weigth, dietPeriod);
+		System.out.println(user.toString());
 	}
 }
