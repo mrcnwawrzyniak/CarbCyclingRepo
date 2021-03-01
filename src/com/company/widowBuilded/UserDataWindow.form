@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.company.widowBuilded.UserDataWindow">
-  <grid id="27dc6" binding="rootPaneUserDataInfo" layout-manager="GridLayoutManager" row-count="6" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="1" vgap="1">
+  <grid id="27dc6" binding="rootPaneUserDataInfo" layout-manager="GridLayoutManager" row-count="6" column-count="7" same-size-horizontally="false" same-size-vertically="false" hgap="1" vgap="1">
     <margin top="5" left="5" bottom="5" right="5"/>
     <constraints>
-      <xy x="43" y="29" width="430" height="324"/>
+      <xy x="43" y="29" width="634" height="324"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -48,52 +48,10 @@
           <text value="   Period (months)"/>
         </properties>
       </component>
-      <component id="f39c" class="javax.swing.JTextArea" binding="textAreaHeigth">
-        <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="180" height="20"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
-      <component id="48d02" class="javax.swing.JTextArea" binding="textAreaWeigth">
-        <constraints>
-          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="180" height="20"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
-      <component id="6eaa" class="javax.swing.JTextArea" binding="textAreaPeriod">
-        <constraints>
-          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="180" height="20"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
-      <component id="6a376" class="javax.swing.JTextArea" binding="textAreaName">
-        <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="180" height="20"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
-      <component id="2d0d3" class="javax.swing.JTextArea" binding="textAreaAge">
-        <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="180" height="20"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value=""/>
-        </properties>
-      </component>
       <grid id="b7571" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="1" row-span="1" col-span="6" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
         <border type="none"/>
@@ -108,6 +66,46 @@
           </component>
         </children>
       </grid>
+      <component id="b54b0" class="javax.swing.JTextField" binding="textFieldName">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="30" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="ba3b" class="javax.swing.JTextField" binding="textFieldAge">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="c205f" class="javax.swing.JTextField" binding="textFieldheigth">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="9d1ea" class="javax.swing.JTextField" binding="textFieldWeigth">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="2988a" class="javax.swing.JTextField" binding="textFieldPeriod">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
     </children>
   </grid>
 </form>

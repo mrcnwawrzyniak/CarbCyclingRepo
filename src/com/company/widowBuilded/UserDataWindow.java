@@ -6,24 +6,77 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class UserDataWindow extends JFrame
 {
 	private JPanel rootPaneUserDataInfo;
-	private JTextArea textAreaName,textAreaHeigth, textAreaWeigth, textAreaPeriod, textAreaAge;
 	private JButton applyButton;
+	private JTextField textFieldName, textFieldAge, textFieldheigth, textFieldWeigth, textFieldPeriod;
 
 	private String name;
 	private int age, heigth, weigth, dietPeriod;
 
 	public UserDataWindow()
 	{
+		textFieldAge.addKeyListener(new KeyAdapter()
+		{
+			@Override
+			public void keyTyped(KeyEvent e)
+			{
+				char character = e.getKeyChar();
+				if ((character < '0' || character > '9') && character != '\b')
+				{
+					e.consume();
+				}
+			}
+		});
+
+		textFieldheigth.addKeyListener(new KeyAdapter()
+		{
+			@Override
+			public void keyTyped(KeyEvent e)
+			{
+				char character = e.getKeyChar();
+				if ((character < '0' || character > '9') && character != '\b')
+				{
+					e.consume();
+				}
+			}
+		});
+
+		textFieldWeigth.addKeyListener(new KeyAdapter()
+		{
+			@Override
+			public void keyTyped(KeyEvent e)
+			{
+				char character = e.getKeyChar();
+				if ((character < '0' || character > '9') && character != '\b')
+				{
+					e.consume();
+				}
+			}
+		});
+
+		textFieldPeriod.addKeyListener(new KeyAdapter()
+		{
+			@Override
+			public void keyTyped(KeyEvent e)
+			{
+				char character = e.getKeyChar();
+				if ((character < '0' || character > '9') && character != '\b')
+				{
+					e.consume();
+				}
+			}
+		});
+
+
 		initWindow();
 		applyButton.addActionListener(e ->
 		{
-			getTextFromTextAreaString(textAreaName);
-			getTextFromTextAreaNumber(textAreaAge, textAreaHeigth, textAreaWeigth, textAreaPeriod);
-			createNewUser();
+
 		});
 	}
 
@@ -31,25 +84,9 @@ public class UserDataWindow extends JFrame
 	{
 		setContentPane(rootPaneUserDataInfo);
 		this.setTitle("User Data Info");
-		this.setBounds(900, 100, 320, 230);
+		this.setBounds(900, 100, 300, 230);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-	}
-
-	private void getTextFromTextAreaString(JTextArea incomingTextArea)
-	{
-		if(incomingTextArea.equals(""))
-		{
-			JOptionPane.showMessageDialog(null, "Insert user name");
-		}
-		else
-		{
-			name = incomingTextArea.getText();
-		}
-	}
-	private void getTextFromTextAreaNumber(JTextArea arg1, JTextArea arg2,JTextArea arg3, JTextArea arg4)
-	{
-		if(arg1.isE)
 	}
 
 	private void createNewUser()
