@@ -21,11 +21,8 @@ public class UserDataWindow extends JFrame
 		initWindow();
 		applyButton.addActionListener(e ->
 		{
-			getTextFromTextArea(textAreaName);
-			getTextFromTextArea(textAreaAge);
-			getTextFromTextArea(textAreaHeigth);
-			getTextFromTextArea(textAreaWeigth);
-			getTextFromTextArea(textAreaPeriod);
+			getTextFromTextAreaString(textAreaName);
+			getTextFromTextAreaNumber(textAreaAge, textAreaHeigth, textAreaWeigth, textAreaPeriod);
 			createNewUser();
 		});
 	}
@@ -39,31 +36,20 @@ public class UserDataWindow extends JFrame
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 	}
 
-	private void getTextFromTextArea(JTextArea incomingTextArea)
+	private void getTextFromTextAreaString(JTextArea incomingTextArea)
 	{
-		if(incomingTextArea != null)
+		if(incomingTextArea.equals(""))
 		{
-			if (incomingTextArea.equals(textAreaName))
-			{
-				name = incomingTextArea.getText();
-			}
-			if(incomingTextArea.equals(textAreaAge))
-			{
-				age = Integer.parseInt(incomingTextArea.getText());
-			}
-			if(incomingTextArea.equals(textAreaHeigth))
-			{
-				heigth = Integer.parseInt(incomingTextArea.getText());
-			}
-			if(incomingTextArea.equals(textAreaWeigth))
-			{
-				weigth = Integer.parseInt(incomingTextArea.getText());
-			}
-			if(incomingTextArea.equals(textAreaPeriod))
-			{
-				dietPeriod = Integer.parseInt(incomingTextArea.getText());
-			}
+			JOptionPane.showMessageDialog(null, "Insert user name");
 		}
+		else
+		{
+			name = incomingTextArea.getText();
+		}
+	}
+	private void getTextFromTextAreaNumber(JTextArea arg1, JTextArea arg2,JTextArea arg3, JTextArea arg4)
+	{
+		if(arg1.isE)
 	}
 
 	private void createNewUser()
