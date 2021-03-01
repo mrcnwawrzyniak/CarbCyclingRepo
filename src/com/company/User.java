@@ -30,7 +30,7 @@ public class User
 		if (age <= 0)
 			JOptionPane.showMessageDialog(null, "Invalid age");
 		else
-			this.age = age;
+			this.weigth = age;
 	}
 
 	public int getWeigth()
@@ -53,7 +53,7 @@ public class User
 
 	public void setHeigth(int heigth)
 	{
-		if (age <= 0)
+		if (heigth <= 0)
 			JOptionPane.showMessageDialog(null, "Invalid heigth");
 		else
 			this.heigth = heigth;
