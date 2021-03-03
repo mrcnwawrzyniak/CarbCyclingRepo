@@ -1,0 +1,1 @@
+User marcin, age: 8, weigth: 8, heigth: 8, dietPeriodInMonths: 8}

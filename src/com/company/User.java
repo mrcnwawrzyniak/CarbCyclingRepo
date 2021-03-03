@@ -66,8 +66,8 @@ public class User
 
 	public void setDietPeriodInmonths(int dietPeriodInMonths)
 	{
-		if (dietPeriodInMonths <= 0 && dietPeriodInMonths >= 5)
-			JOptionPane.showMessageDialog(null, "Minimum died period: 1, Maximum diet period: 5");
+		if (dietPeriodInMonths <= 0)
+			JOptionPane.showMessageDialog(null, "Invalid heigth");
 		else
 			this.dietPeriodInMonths = dietPeriodInMonths;
 	}
@@ -84,6 +84,6 @@ public class User
 	@Override
 	public String toString()
 	{
-		return "User " + name + ", age: " + age + ", weigth: " + weigth + ", heigth: " + heigth + ", dietPeriodInMonths: " + dietPeriodInMonths + '}';
+		return name + "|" + age + "|" + weigth + "|" + heigth + "|" + dietPeriodInMonths;
 	}
 }
