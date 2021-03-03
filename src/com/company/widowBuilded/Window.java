@@ -5,6 +5,7 @@ import com.company.User;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.*;
 
 public class Window extends JFrame
 {
@@ -17,6 +18,9 @@ public class Window extends JFrame
 	private UserDataWindow userDataWindow;
 	private HelpWindow helpWindow;
 	private Window window = this;
+	private User internalUser;
+
+
 	public Window()
 	{
 		initWindow();
@@ -75,16 +79,18 @@ public class Window extends JFrame
 		});
 
 		menuHelp = new JMenuItem("Help");
-		menuExit = new JMenuItem("Exit");
-		menuSave = new JMenuItem("Save");
-
 		mainMenu.add(menuHelp);
 		menuHelp.addActionListener(e -> {
 			helpWindow = new HelpWindow();
 		});
 
+		menuSave = new JMenuItem("Save");
 		mainMenu.add(menuSave);
+		menuSave.addActionListener(e -> {
+			SaveUserData save = new SaveUserData(internalUser);
+		});
 
+		menuExit = new JMenuItem("Exit");
 		mainMenu.add(menuExit);
 		menuExit.addActionListener(e -> {
 			this.dispose();
@@ -93,10 +99,29 @@ public class Window extends JFrame
 
 	void setUserInfoOnMainPage(User user)
 	{
+		internalUser = user;
 		textFieldName.setText(user.getName());
 		textFieldAge.setText(String.valueOf(user.getAge()));
 		textFieldHeight.setText(String.valueOf(user.getHeigth()));
 		textFieldWeight.setText(String.valueOf(user.getWeigth()));
 		textFieldPeriod.setText(String.valueOf(user.dietPeriodInMonths()));
+	}
+
+	class SaveUserData
+	{
+		PrintWriter writer;
+		SaveUserData(User user)
+		{
+			try
+			{
+				writer = new PrintWriter("userData.txt");
+				writer.write(user.toString());
+				writer.close();
+			}
+			catch (FileNotFoundException e)
+			{
+
+			}
+		}
 	}
 }
