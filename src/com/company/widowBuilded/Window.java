@@ -12,8 +12,8 @@ public class Window extends JFrame
 	private JLabel lName, lAge, lHeigth, lWeigth, lPeriod;
 	private JTextField textFieldName, textFieldAge, textFieldHeight, textFieldWeight, textFieldPeriod;
 	private JMenuBar mainMenuBar;
-	private JMenu mainMenu;
-	private JMenuItem menuItemPersonalInfo, menuItemLookAndFeel, menuHelp, menuSave, menuExit;
+	private JMenu mainMenu, menuItemUser;
+	private JMenuItem menuItemLookAndFeel, menuHelp, menuSave, menuExit, menuItemUserPersonalData, menuItemUserTreiningData;
 	private UserDataWindow userDataWindow;
 	private HelpWindow helpWindow;
 	private Window window = this;
@@ -51,20 +51,21 @@ public class Window extends JFrame
 		mainMenuBar.add(mainMenu);
 		mainMenu.setText("Settings");
 
-		menuItemPersonalInfo = new JMenuItem();
-		menuItemPersonalInfo.setText("User");
+		menuItemUser = new JMenu("User");
 
-		menuItemLookAndFeel = new JMenuItem();
-		menuItemLookAndFeel.setText("Theme");
+		menuItemUserPersonalData = new JMenuItem("Personal data");
+		menuItemUser.add(menuItemUserPersonalData);
+
+		menuItemLookAndFeel = new JMenuItem("Theme");
 		menuItemLookAndFeel.addActionListener(e ->
 		{
 
 		});
 
-		mainMenu.add(menuItemPersonalInfo);
+		mainMenu.add(menuItemUser);
 		mainMenu.add(menuItemLookAndFeel);
 
-		menuItemPersonalInfo.addActionListener(new ActionListener()
+		menuItemUserPersonalData.addActionListener(new ActionListener()
 		{
 			@Override
 			public void actionPerformed(ActionEvent e)
@@ -73,21 +74,18 @@ public class Window extends JFrame
 			}
 		});
 
-		menuHelp = new JMenuItem();
-		menuExit = new JMenuItem();
-		menuSave = new JMenuItem();
+		menuHelp = new JMenuItem("Help");
+		menuExit = new JMenuItem("Exit");
+		menuSave = new JMenuItem("Save");
 
 		mainMenu.add(menuHelp);
-		menuHelp.setText("Help");
 		menuHelp.addActionListener(e -> {
 			helpWindow = new HelpWindow();
 		});
 
 		mainMenu.add(menuSave);
-		menuSave.setText("Save");
 
 		mainMenu.add(menuExit);
-		menuExit.setText("Exit");
 		menuExit.addActionListener(e -> {
 			this.dispose();
 		});

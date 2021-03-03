@@ -12,7 +12,7 @@ public class HelpWindow extends JFrame
 	{
 		super("Help");
 		setContentPane(helpWindowPanel);
-		this.setBounds(900, 100, 300, 230);
+		this.setBounds(900, 100, 400, 230);
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		this.setVisible(true);
 
