@@ -1,1 +1,0 @@
-User Marcin, age: 29, weigth: 80, heigth: 175, dietPeriodInMonths: 3}

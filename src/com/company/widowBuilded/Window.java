@@ -69,14 +69,8 @@ public class Window extends JFrame
 		mainMenu.add(menuItemUser);
 		mainMenu.add(menuItemLookAndFeel);
 
-		menuItemUserPersonalData.addActionListener(new ActionListener()
-		{
-			@Override
-			public void actionPerformed(ActionEvent e)
-			{
-				userDataWindow = new UserDataWindow(window);
-			}
-		});
+		menuItemUserPersonalData.addActionListener(e ->
+				userDataWindow = new UserDataWindow(window));
 
 		menuHelp = new JMenuItem("Help");
 		mainMenu.add(menuHelp);
@@ -87,7 +81,9 @@ public class Window extends JFrame
 		menuSave = new JMenuItem("Save");
 		mainMenu.add(menuSave);
 		menuSave.addActionListener(e -> {
-			SaveUserData save = new SaveUserData(internalUser);
+
+				SaveUserData save = new SaveUserData(internalUser);
+
 		});
 
 		menuExit = new JMenuItem("Exit");
@@ -114,9 +110,12 @@ public class Window extends JFrame
 		{
 			try
 			{
-				writer = new PrintWriter("userData.txt");
-				writer.write(user.toString());
-				writer.close();
+				if(user != null)
+				{
+					writer = new PrintWriter("userData.txt");
+					writer.write(user.toString());
+					writer.close();
+				}
 			}
 			catch (FileNotFoundException e)
 			{
