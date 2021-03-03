@@ -42,10 +42,17 @@ public class UserDataWindow extends JFrame
 		applyButton.addActionListener(e ->
 		{
 			name = textFieldName.getText();
-			age = Integer.parseInt(textFieldAge.getText());
-			heigth = Integer.parseInt(textFieldheigth.getText());
-			weigth = Integer.parseInt(textFieldWeigth.getText());
-			dietPeriod = Integer.parseInt(textFieldPeriod.getText());
+			try
+			{
+				age = Integer.parseInt(textFieldAge.getText());
+				heigth = Integer.parseInt(textFieldheigth.getText());
+				weigth = Integer.parseInt(textFieldWeigth.getText());
+				dietPeriod = Integer.parseInt(textFieldPeriod.getText());
+			}
+			catch(Exception ex)
+			{
+				System.out.println(ex.getMessage());
+			}
 			createNewUser();
 		});
 	}
