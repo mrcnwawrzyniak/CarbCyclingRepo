@@ -12,9 +12,10 @@ public class UserDataWindow extends JFrame
 	private JButton applyButton;
 	private JTextField textFieldName, textFieldAge, textFieldheigth, textFieldWeigth, textFieldPeriod;
 	User user;
-
 	private String name;
 	private int age, heigth, weigth, dietPeriod;
+	Window mainWindow;
+
 
 	KeyAdapter keyAdapter = new KeyAdapter()
 	{
@@ -29,13 +30,14 @@ public class UserDataWindow extends JFrame
 		}
 	};
 
-	public UserDataWindow()
+	public UserDataWindow(Window window)
 	{
 		initWindow();
 		textFieldAge.addKeyListener(keyAdapter);
 		textFieldheigth.addKeyListener(keyAdapter);
 		textFieldWeigth.addKeyListener(keyAdapter);
 		textFieldPeriod.addKeyListener(keyAdapter);
+		mainWindow = window;
 
 		applyButton.addActionListener(e ->
 		{
@@ -59,9 +61,8 @@ public class UserDataWindow extends JFrame
 
 	private void createNewUser()
 	{
-		Window window = new Window();
 		user = new User(name, age, heigth, weigth, dietPeriod);
-		window.setLabelsWithUserData(user);
+		mainWindow.setUserInfoOnMainPage(user);
 	}
 
 }

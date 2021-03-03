@@ -10,18 +10,17 @@ public class Window extends JFrame
 {
 	private JPanel rootPane;
 	private JLabel lName, lAge, lHeigth, lWeigth, lPeriod;
-	private JLabel lNameData, lAgeData, lHeightData, lWeightData, lPeriodData;
+	private JTextField textFieldName, textFieldAge, textFieldHeight, textFieldWeight, textFieldPeriod;
 	private JMenuBar mainMenuBar;
 	private JMenu mainMenu;
 	private JMenuItem menuItemPersonalInfo, menuItemLookAndFeel, menuHelp, menuSave, menuExit;
 	private UserDataWindow userDataWindow;
 	private HelpWindow helpWindow;
-
+	private Window window = this;
 	public Window()
 	{
 		initWindow();
 		initMenuBar();
-
 	}
 	private void initWindow()
 	{
@@ -70,7 +69,7 @@ public class Window extends JFrame
 			@Override
 			public void actionPerformed(ActionEvent e)
 			{
-				userDataWindow = new UserDataWindow();
+				userDataWindow = new UserDataWindow(window);
 			}
 		});
 
@@ -94,18 +93,12 @@ public class Window extends JFrame
 		});
 	}
 
-	void setLabelsWithUserData(User user)
+	void setUserInfoOnMainPage(User user)
 	{
-		lNameData = new JLabel();
-		lAgeData = new JLabel();
-		lHeightData = new JLabel();
-		lWeightData = new JLabel();
-		lPeriodData = new JLabel();
-
-		lNameData.setText(user.getName());
-		lAgeData.setText(Integer.toString(user.getAge()));
-		lHeightData.setText(Integer.toString(user.getHeigth()));
-		lWeightData.setText(Integer.toString(user.getWeigth()));
-		lPeriodData.setText(Integer.toString(user.dietPeriodInMonths()));
+		textFieldName.setText(user.getName());
+		textFieldAge.setText(String.valueOf(user.getAge()));
+		textFieldHeight.setText(String.valueOf(user.getHeigth()));
+		textFieldWeight.setText(String.valueOf(user.getWeigth()));
+		textFieldPeriod.setText(String.valueOf(user.dietPeriodInMonths()));
 	}
 }
