@@ -10,12 +10,11 @@ public class UserDataWindow extends JFrame
 {
 	private JPanel rootPaneUserDataInfo;
 	private JButton applyButton;
-	private JTextField textFieldName, textFieldAge, textFieldheigth, textFieldWeigth, textFieldPeriod;
+	private JTextField textFieldGender, textFieldAge, textFieldheigth, textFieldWeigth, textFieldPeriod;
 	User user;
-	private String name;
+	private String gender;
 	private int age, heigth, weigth, dietPeriod;
 	Window mainWindow;
-
 
 	KeyAdapter keyAdapter = new KeyAdapter()
 	{
@@ -41,7 +40,7 @@ public class UserDataWindow extends JFrame
 
 		applyButton.addActionListener(e ->
 		{
-			name = textFieldName.getText();
+			gender = textFieldGender.getText();
 			try
 			{
 				age = Integer.parseInt(textFieldAge.getText());
@@ -68,7 +67,7 @@ public class UserDataWindow extends JFrame
 
 	private void createNewUser()
 	{
-		user = new User(name, age, heigth, weigth, dietPeriod);
+		user = new User(gender, age, heigth, weigth, dietPeriod);
 		mainWindow.setUserInfoOnMainPage(user);
 	}
 

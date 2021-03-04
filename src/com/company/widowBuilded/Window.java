@@ -9,7 +9,7 @@ public class Window extends JFrame
 {
 	private JPanel rootPane;
 	private JLabel lName, lAge, lHeigth, lWeigth, lPeriod;
-	private JTextField textFieldName, textFieldAge, textFieldHeight, textFieldWeight, textFieldPeriod;
+	private JTextField textFieldGender, textFieldAge, textFieldHeight, textFieldWeight, textFieldPeriod;
 	private JMenuBar mainMenuBar;
 	private JMenu mainMenu, menuItemUser;
 	private JMenuItem menuItemLookAndFeel, menuHelp, menuSave, menuExit, menuItemUserPersonalData, menuItemUserTreiningData;
@@ -18,7 +18,6 @@ public class Window extends JFrame
 	private TreiningDataWindow treiningDataWindow;
 	private Window window = this;
 	private User internalUser;
-
 
 	public Window()
 	{
@@ -100,7 +99,7 @@ public class Window extends JFrame
 	void setUserInfoOnMainPage(User user)
 	{
 		internalUser = user;
-		textFieldName.setText(user.getName());
+		textFieldGender.setText(user.getGender());
 		textFieldAge.setText(String.valueOf(user.getAge()));
 		textFieldHeight.setText(String.valueOf(user.getHeigth()));
 		textFieldWeight.setText(String.valueOf(user.getWeigth()));

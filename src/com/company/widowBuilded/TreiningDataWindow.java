@@ -27,7 +27,7 @@ public class TreiningDataWindow extends JFrame
 	{
 		setContentPane(rootPaneTreiningData);
 		this.setTitle("User Treining Info");
-		this.setBounds(900, 100, 500, 230);
+		this.setBounds(900, 100, 600, 230);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 	}

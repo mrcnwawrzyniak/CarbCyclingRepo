@@ -4,20 +4,20 @@ import javax.swing.*;
 
 public class User
 {
-	private String name;
+	private String gender;
 	private int age, weigth, heigth, dietPeriodInMonths;
 
-	public String getName()
+	public String getGender()
 	{
-		return name;
+		return gender;
 	}
 
-	public void setName(String name)
+	public void setGender(String gender)
 	{
-		if (name.isEmpty())
+		if (gender.isEmpty())
 			JOptionPane.showMessageDialog(null, "Invalid name");
 		else
-			this.name = name;
+			this.gender = gender;
 	}
 
 	public int getAge()
@@ -66,7 +66,7 @@ public class User
 
 	public User(String name, int age, int heigth, int weigth, int dietPeriodInMonths)
 	{
-		setName(name);
+		setGender(name);
 		setAge(age);
 		setHeigth(heigth);
 		setWeigth(weigth);
@@ -87,6 +87,6 @@ public class User
 	@Override
 	public String toString()
 	{
-		return name + "|" + age + "|" + weigth + "|" + heigth + "|" + dietPeriodInMonths;
+		return gender + "|" + age + "|" + weigth + "|" + heigth + "|" + dietPeriodInMonths;
 	}
 }
