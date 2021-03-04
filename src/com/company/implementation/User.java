@@ -4,6 +4,7 @@ import javax.swing.*;
 
 public class User
 {
+	private String gender;
 	private int age, weigth, heigth, dietPeriodInMonths;
 
 	public int getAge()
@@ -50,8 +51,14 @@ public class User
 			this.dietPeriodInMonths = dietPeriodInMonths;
 	}
 
-	public User(String name, int age, int heigth, int weigth, int dietPeriodInMonths)
+	public String getGender()
 	{
+		return gender;
+	}
+
+	public User(String gender, int age, int heigth, int weigth, int dietPeriodInMonths)
+	{
+		this.gender = gender;
 		setAge(age);
 		setHeigth(heigth);
 		setWeigth(weigth);
@@ -68,4 +75,5 @@ public class User
 		else
 			return true;
 	}
+
 }

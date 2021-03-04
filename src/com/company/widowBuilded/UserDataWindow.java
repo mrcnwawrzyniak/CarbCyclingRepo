@@ -44,8 +44,6 @@ public class UserDataWindow extends JFrame
 		textFieldWeigth.addKeyListener(keyAdapter);
 		textFieldPeriod.addKeyListener(keyAdapter);
 
-
-
 		applyButton.addActionListener(e ->
 		{
 			try
@@ -59,7 +57,7 @@ public class UserDataWindow extends JFrame
 			{
 				System.out.println(ex.getMessage());
 			}
-			createNewUser();
+			createNewUserAndAddToMainWindow();
 		});
 	}
 
@@ -73,8 +71,13 @@ public class UserDataWindow extends JFrame
 
 	}
 
-	private void createNewUser()
+	private void createNewUserAndAddToMainWindow()
 	{
+		if(!rbMale.isSelected())
+			gender = "Male";
+		else
+			gender = "Female";
+
 		user = new User(gender, age, heigth, weigth, dietPeriod);
 		mainWindow.setUserInfoOnMainPage(user);
 	}

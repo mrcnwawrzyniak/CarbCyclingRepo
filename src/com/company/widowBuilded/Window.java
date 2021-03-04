@@ -86,6 +86,8 @@ public class Window extends JFrame
 	void setUserInfoOnMainPage(User user)
 	{
 		internalUser = user;
+
+		textFieldGender.setText(user.getGender());
 		textFieldAge.setText(String.valueOf(user.getAge()));
 		textFieldHeight.setText(String.valueOf(user.getHeigth()));
 		textFieldWeight.setText(String.valueOf(user.getWeigth()));
