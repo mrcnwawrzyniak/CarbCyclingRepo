@@ -58,24 +58,15 @@ public class Window extends JFrame
 
 		menuItemUserPersonalData = new JMenuItem("Personal data");
 		menuItemUser.add(menuItemUserPersonalData);
-		menuItemUserPersonalData.addActionListener(e ->
-				userDataWindow = new UserDataWindow(window));
+		menuItemUserPersonalData.addActionListener(e -> userDataWindow = new UserDataWindow(window));
 
 		menuItemUserTreiningData = new JMenuItem("Treining Data");
 		menuItemUser.add(menuItemUserTreiningData);
-		menuItemUserTreiningData.addActionListener(e ->
-		{
-			treiningDataWindow = new TreiningDataWindow();
-		});
+		menuItemUserTreiningData.addActionListener(e -> { treiningDataWindow = new TreiningDataWindow(); });
+
 		menuItemLookAndFeel = new JMenuItem("Theme");
 		mainMenu.add(menuItemLookAndFeel);
-		menuItemLookAndFeel.addActionListener(e ->
-		{
-
-		});
-
-
-
+		menuItemLookAndFeel.addActionListener(e -> {   });
 
 		menuHelp = new JMenuItem("Help");
 		mainMenu.add(menuHelp);
@@ -85,21 +76,16 @@ public class Window extends JFrame
 
 		menuSave = new JMenuItem("Save");
 		mainMenu.add(menuSave);
-		menuSave.addActionListener(e -> {
-				SaveUserData save = new SaveUserData(internalUser);
-		});
+		menuSave.addActionListener(e -> { SaveUserData save = new SaveUserData(internalUser); });
 
 		menuExit = new JMenuItem("Exit");
 		mainMenu.add(menuExit);
-		menuExit.addActionListener(e -> {
-			this.dispose();
-		});
+		menuExit.addActionListener(e -> { this.dispose(); });
 	}
 
 	void setUserInfoOnMainPage(User user)
 	{
 		internalUser = user;
-		textFieldGender.setText(user.getGender());
 		textFieldAge.setText(String.valueOf(user.getAge()));
 		textFieldHeight.setText(String.valueOf(user.getHeigth()));
 		textFieldWeight.setText(String.valueOf(user.getWeigth()));

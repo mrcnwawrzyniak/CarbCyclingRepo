@@ -15,7 +15,7 @@
         <properties>
           <alignmentX value="1.0"/>
           <alignmentY value="1.0"/>
-          <text value="Name"/>
+          <text value="Gender"/>
         </properties>
       </component>
       <component id="ee7f7" class="javax.swing.JLabel" binding="lAge">

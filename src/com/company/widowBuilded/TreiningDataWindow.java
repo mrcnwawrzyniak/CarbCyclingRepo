@@ -48,41 +48,39 @@ public class TreiningDataWindow extends JFrame
 
 			}
 
-			if(e.getSource() == btnKeep)
+			else if(e.getSource() == btnKeep)
 			{
 
 			}
 
-			if(e.getSource() == btnLose)
+			else if(e.getSource() == btnLose)
 			{
 
 			}
-			if(e.getSource() == btnActiv1)
+			else if(e.getSource() == btnActiv1)
 			{
 
 			}
-			if(e.getSource() == btnActiv2)
+			else if(e.getSource() == btnActiv2)
 			{
 
 			}
-			if(e.getSource() == btnActiv3)
+			else if(e.getSource() == btnActiv3)
 			{
 
 			}
-			if(e.getSource() == btnActiv4)
+			else if(e.getSource() == btnActiv4)
 			{
 
 			}
-			if(e.getSource() == btnActiv5)
+			else if(e.getSource() == btnActiv5)
 			{
 
 			}
-			if(e.getSource() == btnActiv6)
+			else if(e.getSource() == btnActiv6)
 			{
 
 			}
-
 		}
 	}
-
 }

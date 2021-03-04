@@ -4,28 +4,14 @@ import javax.swing.*;
 
 public class User
 {
-	private String gender;
 	private int age, weigth, heigth, dietPeriodInMonths;
-
-	public String getGender()
-	{
-		return gender;
-	}
-
-	public void setGender(String gender)
-	{
-		if (gender.isEmpty())
-			JOptionPane.showMessageDialog(null, "Invalid name");
-		else
-			this.gender = gender;
-	}
 
 	public int getAge()
 	{
 		return age;
 	}
 
-	public void setAge(int age)
+	private void setAge(int age)
 	{
 		if(validationInsertValue(age))
 			this.age = age;
@@ -36,7 +22,7 @@ public class User
 		return weigth;
 	}
 
-	public void setWeigth(int weigth)
+	private void setWeigth(int weigth)
 	{
 		if(validationInsertValue(weigth))
 			this.weigth = weigth;
@@ -47,7 +33,7 @@ public class User
 		return heigth;
 	}
 
-	public void setHeigth(int heigth)
+	private void setHeigth(int heigth)
 	{
 		if(validationInsertValue(heigth))
 			this.heigth = heigth;
@@ -58,7 +44,7 @@ public class User
 		return dietPeriodInMonths;
 	}
 
-	public void setDietPeriodInmonths(int dietPeriodInMonths)
+	private void setDietPeriodInmonths(int dietPeriodInMonths)
 	{
 		if(validationInsertValue(dietPeriodInMonths))
 			this.dietPeriodInMonths = dietPeriodInMonths;
@@ -66,7 +52,6 @@ public class User
 
 	public User(String name, int age, int heigth, int weigth, int dietPeriodInMonths)
 	{
-		setGender(name);
 		setAge(age);
 		setHeigth(heigth);
 		setWeigth(weigth);
@@ -82,11 +67,5 @@ public class User
 		}
 		else
 			return true;
-	}
-
-	@Override
-	public String toString()
-	{
-		return gender + "|" + age + "|" + weigth + "|" + heigth + "|" + dietPeriodInMonths;
 	}
 }
