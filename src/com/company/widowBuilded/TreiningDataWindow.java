@@ -10,6 +10,12 @@ public class TreiningDataWindow extends JFrame
 	private JButton btnLose;
 	private JButton btnKeep;
 	private JButton btnIncrease;
+	private JButton btnActiv1;
+	private JButton btnActiv2;
+	private JButton btnActiv3;
+	private JButton btnActiv4;
+	private JButton btnActiv5;
+	private JButton btnActiv6;
 
 	public TreiningDataWindow()
 	{
