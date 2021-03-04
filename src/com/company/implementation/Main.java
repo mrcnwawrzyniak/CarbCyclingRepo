@@ -1,4 +1,4 @@
-package com.company;
+package com.company.implementation;
 
 import com.company.widowBuilded.Window;
 

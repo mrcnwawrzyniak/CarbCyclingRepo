@@ -1,6 +1,6 @@
 package com.company.widowBuilded;
 
-import com.company.User;
+import com.company.implementation.User;
 
 import javax.swing.*;
 import java.awt.event.KeyAdapter;

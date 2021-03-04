@@ -1,10 +1,8 @@
 package com.company.widowBuilded;
 
-import com.company.User;
+import com.company.implementation.User;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.*;
 
 public class Window extends JFrame
@@ -17,6 +15,7 @@ public class Window extends JFrame
 	private JMenuItem menuItemLookAndFeel, menuHelp, menuSave, menuExit, menuItemUserPersonalData, menuItemUserTreiningData;
 	private UserDataWindow userDataWindow;
 	private HelpWindow helpWindow;
+	private TreiningDataWindow treiningDataWindow;
 	private Window window = this;
 	private User internalUser;
 
@@ -56,21 +55,28 @@ public class Window extends JFrame
 		mainMenu.setText("Settings");
 
 		menuItemUser = new JMenu("User");
+		mainMenu.add(menuItemUser);
 
 		menuItemUserPersonalData = new JMenuItem("Personal data");
 		menuItemUser.add(menuItemUserPersonalData);
+		menuItemUserPersonalData.addActionListener(e ->
+				userDataWindow = new UserDataWindow(window));
 
+		menuItemUserTreiningData = new JMenuItem("Treining Data");
+		menuItemUser.add(menuItemUserTreiningData);
+		menuItemUserTreiningData.addActionListener(e ->
+		{
+			treiningDataWindow = new TreiningDataWindow();
+		});
 		menuItemLookAndFeel = new JMenuItem("Theme");
+		mainMenu.add(menuItemLookAndFeel);
 		menuItemLookAndFeel.addActionListener(e ->
 		{
 
 		});
 
-		mainMenu.add(menuItemUser);
-		mainMenu.add(menuItemLookAndFeel);
 
-		menuItemUserPersonalData.addActionListener(e ->
-				userDataWindow = new UserDataWindow(window));
+
 
 		menuHelp = new JMenuItem("Help");
 		mainMenu.add(menuHelp);
@@ -81,9 +87,7 @@ public class Window extends JFrame
 		menuSave = new JMenuItem("Save");
 		mainMenu.add(menuSave);
 		menuSave.addActionListener(e -> {
-
 				SaveUserData save = new SaveUserData(internalUser);
-
 		});
 
 		menuExit = new JMenuItem("Exit");

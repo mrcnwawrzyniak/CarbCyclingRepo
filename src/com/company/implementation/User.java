@@ -1,4 +1,4 @@
-package com.company;
+package com.company.implementation;
 
 import javax.swing.*;
 
@@ -27,9 +27,7 @@ public class User
 
 	public void setAge(int age)
 	{
-		if (age <= 0)
-			JOptionPane.showMessageDialog(null, "Invalid age");
-		else
+		if(validationInsertValue(age))
 			this.age = age;
 	}
 
@@ -40,9 +38,7 @@ public class User
 
 	public void setWeigth(int weigth)
 	{
-		if (weigth <= 0)
-			JOptionPane.showMessageDialog(null, "Invalid weigth");
-		else
+		if(validationInsertValue(weigth))
 			this.weigth = weigth;
 	}
 
@@ -53,9 +49,7 @@ public class User
 
 	public void setHeigth(int heigth)
 	{
-		if (heigth <= 0)
-			JOptionPane.showMessageDialog(null, "Invalid heigth");
-		else
+		if(validationInsertValue(heigth))
 			this.heigth = heigth;
 	}
 
@@ -66,9 +60,7 @@ public class User
 
 	public void setDietPeriodInmonths(int dietPeriodInMonths)
 	{
-		if (dietPeriodInMonths <= 0)
-			JOptionPane.showMessageDialog(null, "Invalid heigth");
-		else
+		if(validationInsertValue(dietPeriodInMonths))
 			this.dietPeriodInMonths = dietPeriodInMonths;
 	}
 
@@ -79,6 +71,17 @@ public class User
 		setHeigth(heigth);
 		setWeigth(weigth);
 		setDietPeriodInmonths(dietPeriodInMonths);
+	}
+
+	private boolean validationInsertValue(int arg1)
+	{
+		if(arg1 <= 0)
+		{
+			JOptionPane.showMessageDialog(null, "Invalid data");
+			return false;
+		}
+		else
+			return true;
 	}
 
 	@Override
