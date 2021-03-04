@@ -7,20 +7,12 @@ import java.awt.event.ActionListener;
 public class TreiningDataWindow extends JFrame
 {
 	private JPanel rootPaneTreiningData;
-	private JButton btnLose;
-	private JButton btnKeep;
-	private JButton btnIncrease;
-	private JButton btnActiv1;
-	private JButton btnActiv2;
-	private JButton btnActiv3;
-	private JButton btnActiv4;
-	private JButton btnActiv5;
-	private JButton btnActiv6;
+	private JButton btnLose, btnKeep, btnIncrease, btnActiv1, btnActiv2, btnActiv3, btnActiv4, btnActiv5, btnActiv6;
 
 	public TreiningDataWindow()
 	{
 		initWindow();
-
+		setAction();
 	}
 
 	private void initWindow()
@@ -32,7 +24,21 @@ public class TreiningDataWindow extends JFrame
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 	}
 
-	class ButtonListener implements ActionListener
+	private void setAction()
+	{
+		ButtonListener btnListener = new ButtonListener();
+		btnLose.addActionListener(btnListener);
+		btnKeep.addActionListener(btnListener);
+		btnIncrease.addActionListener(btnListener);
+		btnActiv1.addActionListener(btnListener);
+		btnActiv2.addActionListener(btnListener);
+		btnActiv3.addActionListener(btnListener);
+		btnActiv4.addActionListener(btnListener);
+		btnActiv5.addActionListener(btnListener);
+		btnActiv6.addActionListener(btnListener);
+	}
+
+	class ButtonListener extends JButton implements ActionListener
 	{
 		@Override
 		public void actionPerformed(ActionEvent e)
@@ -51,6 +57,31 @@ public class TreiningDataWindow extends JFrame
 			{
 
 			}
+			if(e.getSource() == btnActiv1)
+			{
+
+			}
+			if(e.getSource() == btnActiv2)
+			{
+
+			}
+			if(e.getSource() == btnActiv3)
+			{
+
+			}
+			if(e.getSource() == btnActiv4)
+			{
+
+			}
+			if(e.getSource() == btnActiv5)
+			{
+
+			}
+			if(e.getSource() == btnActiv6)
+			{
+
+			}
+
 		}
 	}
 
