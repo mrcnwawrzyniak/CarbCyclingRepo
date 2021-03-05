@@ -28,13 +28,10 @@ public class UserDataWindow extends JFrame
 		initWindow();
 		setKeyAdapter();
 		mainWindow = window;
-<<<<<<< HEAD
-=======
 
 		buttonGroup.add(rbMale);
 		buttonGroup.add(rbFemale);
 
->>>>>>> RadioButtonImplementation
 		textFieldAge.addKeyListener(keyAdapter);
 		textFieldheigth.addKeyListener(keyAdapter);
 		textFieldWeigth.addKeyListener(keyAdapter);

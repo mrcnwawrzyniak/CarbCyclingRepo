@@ -60,7 +60,7 @@ public class Window extends JFrame
 		menuItemUser.add(menuItemUserPersonalData);
 		menuItemUserPersonalData.addActionListener(e -> userDataWindow = new UserDataWindow(window));
 
-		menuItemUserTreiningData = new JMenuItem("Treining Data");
+		menuItemUserTreiningData = new JMenuItem("Treiing Data");
 		menuItemUser.add(menuItemUserTreiningData);
 		menuItemUserTreiningData.addActionListener(e -> { treiningDataWindow = new TreiningDataWindow(); });
 
