@@ -38,7 +38,6 @@ public class UserDataWindow extends JFrame
 	{
 		initWindow();
 		mainWindow = window;
-
 		textFieldAge.addKeyListener(keyAdapter);
 		textFieldheigth.addKeyListener(keyAdapter);
 		textFieldWeigth.addKeyListener(keyAdapter);
