@@ -65,7 +65,7 @@ public class Window extends JFrame
 		menuItemUserTreiningData.addActionListener(e -> { treiningDataWindow = new TreiningDataWindow(); });
 
 		menuItemLookAndFeel = new JMenuItem("Theme");
-		mainMenu.add(menuItemLookAndFeel);
+		mainMenu.add(menuItemLookAndFeel);q
 		menuItemLookAndFeel.addActionListener(e -> {   });
 
 		menuHelp = new JMenuItem("Help");

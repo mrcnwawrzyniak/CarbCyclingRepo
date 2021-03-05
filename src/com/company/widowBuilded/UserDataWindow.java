@@ -12,32 +12,29 @@ public class UserDataWindow extends JFrame
 	private JButton applyButton;
 	private JTextField textFieldAge, textFieldheigth, textFieldWeigth, textFieldPeriod;
 
-	private JRadioButton rbMale = new JRadioButton();
-	private JRadioButton rbFemale = new JRadioButton();
-	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private JRadioButton rbMale;
+	private JRadioButton rbFemale;
+	private ButtonGroup buttonGroup = new ButtonGroup();
 
-	User user;
+	private Window mainWindow;
+	private User user;
+	private KeyAdapter keyAdapter;
+
 	private String gender;
 	private int age, heigth, weigth, dietPeriod;
-	Window mainWindow;
-
-	KeyAdapter keyAdapter = new KeyAdapter()
-	{
-		@Override
-		public void keyTyped(KeyEvent e)
-		{
-			char character = e.getKeyChar();
-			if ((character < '0' || character > '9') && character != '\b')
-			{
-				e.consume();
-			}
-		}
-	};
 
 	public UserDataWindow(Window window)
 	{
 		initWindow();
+		setKeyAdapter();
 		mainWindow = window;
+<<<<<<< HEAD
+=======
+
+		buttonGroup.add(rbMale);
+		buttonGroup.add(rbFemale);
+
+>>>>>>> RadioButtonImplementation
 		textFieldAge.addKeyListener(keyAdapter);
 		textFieldheigth.addKeyListener(keyAdapter);
 		textFieldWeigth.addKeyListener(keyAdapter);
@@ -67,14 +64,29 @@ public class UserDataWindow extends JFrame
 		this.setBounds(900, 100, 300, 230);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+	}
 
+	private void setKeyAdapter()
+	{
+		keyAdapter = new KeyAdapter()
+		{
+			@Override
+			public void keyTyped(KeyEvent e)
+			{
+				char character = e.getKeyChar();
+				if ((character < '0' || character > '9') && character != '\b')
+				{
+					e.consume();
+				}
+			}
+		};
 	}
 
 	private void createNewUserAndAddToMainWindow()
 	{
-		if(!rbMale.isSelected())
+		if(rbMale.isSelected())
 			gender = "Male";
-		else
+		else if(rbFemale.isSelected())
 			gender = "Female";
 
 		user = new User(gender, age, heigth, weigth, dietPeriod);
