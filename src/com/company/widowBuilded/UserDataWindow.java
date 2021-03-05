@@ -61,8 +61,6 @@ public class UserDataWindow extends JFrame
 		this.setBounds(900, 100, 300, 230);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-
-
 	}
 
 	private void setKeyAdapter()
@@ -83,9 +81,9 @@ public class UserDataWindow extends JFrame
 
 	private void createNewUserAndAddToMainWindow()
 	{
-		if(!rbMale.isSelected())
+		if(rbMale.isSelected())
 			gender = "Male";
-		else
+		else if(rbFemale.isSelected())
 			gender = "Female";
 
 		user = new User(gender, age, heigth, weigth, dietPeriod);
