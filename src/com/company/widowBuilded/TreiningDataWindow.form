@@ -1,156 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.company.widowBuilded.TreiningDataWindow">
-  <grid id="27dc6" binding="rootPaneTreiningData" layout-manager="GridLayoutManager" row-count="8" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="rootPaneTreiningData" layout-manager="GridLayoutManager" row-count="8" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="10" left="10" bottom="10" right="10"/>
     <constraints>
-      <xy x="20" y="20" width="570" height="400"/>
+      <xy x="20" y="20" width="620" height="400"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
+      <vspacer id="90c31">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="8" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="85e28" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="8" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="(treining frequency during one week/work type)"/>
+        </properties>
+      </component>
+      <grid id="41ebd" binding="panel1" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="8" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="43f67" class="javax.swing.JRadioButton" binding="radioButtonIcrease">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Increase weight"/>
+            </properties>
+          </component>
+          <component id="6fb8e" class="javax.swing.JRadioButton" binding="radioButtonLose">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Lose weight"/>
+            </properties>
+          </component>
+          <component id="a1aea" class="javax.swing.JRadioButton" binding="radioButtonKeep">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Keep weight"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <component id="98f46" class="javax.swing.JRadioButton" binding="radioButton1">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="none / sitting work"/>
+        </properties>
+      </component>
+      <component id="6459b" class="javax.swing.JRadioButton" binding="radioButton2">
+        <constraints>
+          <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="1-2 / sitting work"/>
+        </properties>
+      </component>
+      <component id="b65b" class="javax.swing.JRadioButton" binding="radioButton3">
+        <constraints>
+          <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="3-4 / sitting work"/>
+        </properties>
+      </component>
+      <component id="7840c" class="javax.swing.JRadioButton" binding="radioButton4">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="1-2 / physical work"/>
+        </properties>
+      </component>
+      <component id="5284b" class="javax.swing.JRadioButton" binding="radioButton5">
+        <constraints>
+          <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="3-4 / physical"/>
+        </properties>
+      </component>
+      <component id="e7a3" class="javax.swing.JRadioButton" binding="radioButton6">
+        <constraints>
+          <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="professional"/>
+        </properties>
+      </component>
+      <component id="7ce4" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <alignmentY value="0.0"/>
+          <font size="12" style="1"/>
+          <text value="Daily activity"/>
+        </properties>
+      </component>
       <component id="42563" class="javax.swing.JLabel">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font size="12" style="1"/>
           <text value="Treining plan"/>
         </properties>
       </component>
-      <vspacer id="90c31">
+      <component id="46ca1" class="javax.swing.JLabel">
         <constraints>
-          <grid row="7" column="0" row-span="1" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </vspacer>
-      <component id="7dac6" class="javax.swing.JButton" binding="btnLose">
-        <constraints>
-          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <minimum-size width="160" height="20"/>
-            <preferred-size width="160" height="20"/>
-            <maximum-size width="160" height="20"/>
-          </grid>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Lose weigth"/>
-        </properties>
-      </component>
-      <component id="1a17e" class="javax.swing.JButton" binding="btnKeep">
-        <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <minimum-size width="160" height="20"/>
-            <preferred-size width="160" height="20"/>
-            <maximum-size width="160" height="20"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value="Keep weigth"/>
-        </properties>
-      </component>
-      <component id="a3e52" class="javax.swing.JButton" binding="btnIncrease">
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <minimum-size width="160" height="20"/>
-            <preferred-size width="160" height="20"/>
-            <maximum-size width="160" height="20"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value="Increase weigth"/>
-        </properties>
-      </component>
-      <component id="7ce4" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <alignmentY value="1.0"/>
-          <font size="12" style="1"/>
-          <text value="Daily activity"/>
-        </properties>
-      </component>
-      <component id="df530" class="javax.swing.JButton" binding="btnActiv1">
-        <constraints>
-          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <minimum-size width="160" height="20"/>
-            <preferred-size width="160" height="20"/>
-            <maximum-size width="160" height="20"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value="none/sitting work"/>
-        </properties>
-      </component>
-      <component id="ef18a" class="javax.swing.JButton" binding="btnActiv2">
-        <constraints>
-          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <minimum-size width="160" height="20"/>
-            <preferred-size width="160" height="20"/>
-            <maximum-size width="160" height="20"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value="1-2 times/sitting work"/>
-        </properties>
-      </component>
-      <component id="ff658" class="javax.swing.JButton" binding="btnActiv3">
-        <constraints>
-          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <minimum-size width="160" height="20"/>
-            <preferred-size width="160" height="20"/>
-            <maximum-size width="160" height="20"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value="3-4 times/sitting work"/>
-        </properties>
-      </component>
-      <component id="2c5fe" class="javax.swing.JButton" binding="btnActiv4">
-        <constraints>
-          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <minimum-size width="160" height="20"/>
-            <preferred-size width="160" height="20"/>
-            <maximum-size width="160" height="20"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value="1-2 times/physical work "/>
-        </properties>
-      </component>
-      <component id="8880c" class="javax.swing.JButton" binding="btnActiv5">
-        <constraints>
-          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <minimum-size width="160" height="20"/>
-            <preferred-size width="160" height="20"/>
-            <maximum-size width="160" height="20"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value="3-4 times/physical work "/>
-        </properties>
-      </component>
-      <component id="54ae1" class="javax.swing.JButton" binding="btnActiv6">
-        <constraints>
-          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <minimum-size width="160" height="20"/>
-            <preferred-size width="160" height="20"/>
-            <maximum-size width="160" height="20"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value="professional athletes "/>
-        </properties>
-      </component>
-      <vspacer id="33485">
-        <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </vspacer>
-      <component id="85e28" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="4" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="(treining frequency during one week/work type)"/>
+          <text value="(your main goal in training)"/>
         </properties>
       </component>
     </children>
