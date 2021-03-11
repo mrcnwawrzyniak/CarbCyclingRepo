@@ -8,7 +8,7 @@ public class TreiningDataWindow extends JFrame
 {
 	private JPanel rootPaneTreiningData;
 	private JRadioButton radioButtonIcrease, radioButtonLose, radioButtonKeep, radioButton2, radioButton1, radioButton3, radioButton4, radioButton5, radioButton6;
-	private JPanel panel1;
+
 	private ButtonGroup bg1 = new ButtonGroup(), bg2 = new ButtonGroup();
 
 	public TreiningDataWindow()
@@ -21,7 +21,7 @@ public class TreiningDataWindow extends JFrame
 	{
 		setContentPane(rootPaneTreiningData);
 		this.setTitle("User Treining Info");
-		this.setExtendedState();
+		this.setResizable(false);
 		this.setBounds(900, 100, 400, 230);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
